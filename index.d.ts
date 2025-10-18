@@ -32,3 +32,4 @@
 /// <reference path="globals.d.ts" />
 /// <reference path="lib/proc.d.ts" />
 /// <reference path="lib/bench.d.ts" />
+/// <reference path="lib/thread.d.ts" />

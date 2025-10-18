@@ -258,6 +258,7 @@ interface Core {
   aligned_alloc(alignment: number, size: number): number;
   memmove(dest: number, src: number, size: number): number;
   fork(): number;
+  usleep(microseconds: number): void;
   sysconf(num: number): number;
   times(buf: TypedArray): number;
   pread(num: number, buf: TypedArray, num2: number, num3: number): number;
@@ -276,8 +277,8 @@ interface Core {
   readFile(path: string, flags?: number, size?: number): Uint8Array;
 
   isolate_context_size(): number;
-  isolate_context_destroy(context: TypedArray): void;
-  isolate_context_create(argc: number, argv: number, main: string, main_size: number, script: string, script_size: number, buffer: number, buffer_len: number, fd: number, starttime: number, globalname: string, scriptname: string, cleanup: number, onexit: number, startupdata: number, context: TypedArray): void;
+  isolate_context_destroy(context: number): void;
+  isolate_context_create(argc: number, argv: number, main: string, main_size: number, script: string, script_size: number, buffer: number, buffer_len: number, fd: number, starttime: number, globalname: string, scriptname: string, cleanup: number, onexit: number, startupdata: number, context: number): void;
   writeFile(
     path: string,
     u8: Uint8Array,
