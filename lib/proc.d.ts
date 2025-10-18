@@ -1,7 +1,7 @@
 declare module "lib/proc.js" {
 
 type ExecArgs = {
-  args: Ptr,
+  args: Ptr<TypedArray>,
   cstrings: TypedArray[]
 };
 

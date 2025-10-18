@@ -1,38 +1,37 @@
 {
-    "name": "@types/lo",
-    "version": "0.0.19-pre",
-    "description": "TypeScript definitions for lo",
-    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lo",
-    "license": "MIT",
-    "contributors": [
-        {
-            "name": "Andrew Johnston",
-            "githubUsername": "billywhizz",
-            "url": "https://github.com/billywhizz"
-        }
-    ],
-    "main": "",
-    "types": "index.d.ts",
-    "typesVersions": {
-        "<=5.6": {
-            "*": [
-                "ts5.6/*"
-            ]
-        },
-        "<=5.7": {
-            "*": [
-                "ts5.7/*"
-            ]
-        }
+  "name": "@types/lo",
+  "version": "0.0.19-pre",
+  "description": "TypeScript definitions for lo",
+  "homepage": "https://github.com/just-js/lo",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Andrew Johnston",
+      "githubUsername": "billywhizz",
+      "url": "https://github.com/billywhizz"
+    }
+  ],
+  "main": "",
+  "types": "index.d.ts",
+  "typesVersions": {
+    "<=5.6": {
+      "*": [
+        "ts5.6/*"
+      ]
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-        "directory": "types/lo"
-    },
-    "scripts": {},
-    "dependencies": {},
-    "peerDependencies": {},
-    "typesPublisherContentHash": "4bf36d2d52de2aa8898ee24d026198a784567fa5a42adcae5e37b826951ff66d",
-    "typeScriptVersion": "5.2"
+    "<=5.7": {
+      "*": [
+        "ts5.7/*"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/just-js/lo-types.git",
+    "directory": "."
+  },
+  "scripts": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "typeScriptVersion": "5.2"
 }
