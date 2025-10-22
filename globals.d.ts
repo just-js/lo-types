@@ -187,6 +187,7 @@ type UnknownLib<T extends string | number> = Record<
   T | string | number | symbol,
   unknown
 >;
+
 type SetLibTypeIfNameMatches<
   T extends string | number,
   Name,
@@ -197,6 +198,7 @@ type SetLibTypeIfNameMatches<
     ? Record<T, LibType>
     : FallbackType
   : FallbackType;
+
 type Library<T extends string | number> =
   SetLibTypeIfNameMatches<T, 'core', Core, UnknownLib<T>>
   & {
@@ -204,6 +206,39 @@ type Library<T extends string | number> =
   fileName?: string;
   internal?: boolean;
 };
+
+/*
+type SetLibTypeIfNameMatches<
+  T extends string | number,
+  Name,
+  LibType,
+  FallbackType
+> = Name extends T
+  ? T extends Name
+    ? Record<T, LibType>
+    : FallbackType
+  : FallbackType;
+
+type Library<T extends string | number> =
+  SetLibTypeIfNameMatches<T, 'core', Core, UnknownLib<T>>
+  & {
+  handle?: number;
+  fileName?: string;
+  internal?: boolean;
+};
+
+interface BuiltinModule {
+  "core": typeof import("core");
+}
+
+type Library<T extends string | number> =
+  BuiltinModule<T, UnknownLib<T>>
+  & {
+  handle?: number;
+  fileName?: string;
+  internal?: boolean;
+};
+*/
 
 interface RuntimeVersion {
   lo: string;
@@ -366,7 +401,7 @@ interface Runtime {
   builtins(): string[];
   assert(expression: any, message?: string | Function): any;
   cstr(str: string): CString;
-  load(name: string): any;
+  load<T extends string>(name: T): Library<T>;
   library<T extends string | number>(name: T): Library<T>;
   /**
    * Prints a string to the console
