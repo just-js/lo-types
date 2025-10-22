@@ -31,7 +31,7 @@
     "directory": "."
   },
   "scripts": {
-    "publish": "npm pkg fix && npm publish --tag 0.0.0-testing"
+    "publish": "npm pkg fix && npm publish --tag 0.0.1"
   },
   "dependencies": {},
   "peerDependencies": {},
