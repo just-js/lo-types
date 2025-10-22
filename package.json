@@ -1,6 +1,6 @@
 {
-  "name": "@types/lo",
-  "version": "0.0.19-pre",
+  "name": "@beardsoft/lo-types",
+  "version": "0.0.0-testing",
   "description": "TypeScript definitions for lo",
   "homepage": "https://github.com/just-js/lo",
   "license": "MIT",
@@ -12,7 +12,7 @@
     }
   ],
   "main": "",
-  "types": "index.d.ts",
+  "types": "index",
   "typesVersions": {
     "<=5.6": {
       "*": [
