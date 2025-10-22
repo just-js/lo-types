@@ -30,7 +30,9 @@
     "url": "git+https://github.com/just-js/lo-types.git",
     "directory": "."
   },
-  "scripts": {},
+  "scripts": {
+    "publish": "npm pkg fix && npm publish"
+  },
   "dependencies": {},
   "peerDependencies": {},
   "typeScriptVersion": "5.2"
